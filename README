@@ -5,3 +5,38 @@ currently proof-of-concept. design docs forthcoming.
 *important pages*
 http://libtorrent.rakshasa.no/wiki/RTorrentCommandsRaw
 http://libtorrent.rakshasa.no/wiki/RTorrentXMLRPCGuide
+
+*design notes*
+        rtorrent + initscript/daemon account
+        django-seedbox
+                """ web-based frontend for managing a bunch
+                of features/functions/other apps """
+                RSS
+                        flexget
+
+                rtorrent configs
+                        auto dir
+                        bandwidth
+                        saving
+
+                torrent list (RPC to rtorrent)
+                """ this is the main interface. the seed and
+                file management are done by another program """
+                        view leeching/seeding/active
+                                by tracker
+                        configure seed times/limits
+                                re?
+                        configure actions (oncomplete, onseedlimit)
+                                scripts (cgi-bin like)
+                        mark as "seed forever"
+
+                torrent-tron (worker process)
+                        oncomplete
+                                manage un-rar
+                                move/copy to /tank
+                                        may need to use /tank/incoming and then sort
+                                move to /seed
+                        onseedlimit
+                                remove file from /seed and torrent (RPC call)
+                        sorter
+                                https://github.com/dbr/tvname
