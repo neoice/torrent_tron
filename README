@@ -1,3 +1,7 @@
-Python and Django-based web-interface and torrent/seed management system.
+Python and Django-based web-interface and torrent/seed management system built on top of rtorrent and some other utilities.
 
 currently proof-of-concept. design docs forthcoming.
+
+*important pages*
+http://libtorrent.rakshasa.no/wiki/RTorrentCommandsRaw
+http://libtorrent.rakshasa.no/wiki/RTorrentXMLRPCGuide
