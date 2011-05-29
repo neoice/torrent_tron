@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import sys, os
 
-sys.path.append('/home/neoice/code/torrent_tron')
-sys.path.append('/home/neoice/code/torrent_tron/rtorrent_interface')
+sys.path.append('/srv/torrent_tron')
+sys.path.append('/srv/torrent_tron/rtorrent_interface')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
